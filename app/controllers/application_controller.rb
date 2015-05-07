@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   def site_search
     @q= Post.ransack(params[:q])
-    @posts=@q.result(distinct: true)
+    @search_posts=@q.result(distinct: true)
   end
   
   helper_method :all_categories

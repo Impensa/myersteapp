@@ -9,7 +9,6 @@ gem 'pg'
 # gem 'sqlite3'
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
-gem 'meta_search'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
