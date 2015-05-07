@@ -1,18 +1,31 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Myersteapp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<%= render "partials/header" %>
+  <div id="page">
+   <div id="page-bgtop">
+    <div id="page-bgbtm">
+     <div id="content">
+     		 <div class="flash-message">
+     		 <% flash.each do |key,value| %>
+				  <p> <%= value %></p>
+			   <% end %>
+			   </div>
 
-	<% flash.each do |key,value| %>
-	<p> <%= value %></p>
-	<% end %>
+	       <%= yield %>
+      
+        <div style="clear: both;">&nsbp;</div>
+        </div>
+        <!-- end #content -->
+        <%= render "partials/sidebar" %>
+     <div style="clear: both;">&nsbp;</div>
 
-	<%= yield %>
-
+    </div>
+   </div>
+  </div>
+  <!-- end #page-->
+  <div id="footer">
+   <p>&Copy: 2013, My Ruby Blog -Sample Project</p>
+  </div>
+  <!-- en #footer-->
+ </div>
+ <!-- end #wrapper-->
 </body>
 </html>

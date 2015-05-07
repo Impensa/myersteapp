@@ -7,6 +7,8 @@ gem 'rails', '4.1.8'
 gem 'pg'
 # T Killed of SQLllite for postgres
 # gem 'sqlite3'
+gem 'devise'
+gem 'activeadmin', github: 'activeadmin'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
