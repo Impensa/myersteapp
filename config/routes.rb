@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :comments
+
   get 'pages/about'
   get '/about', to: 'pages#about'
 

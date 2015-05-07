@@ -1,12 +1,12 @@
 <% @posts.each do |post| %>
 	<div class"Post">  
 		<h2 class="title"><%= link_to post.title, post %></h2>
-			<small><%= post.category.name %></small>
-				<div class="entry"><%= post.body %></div>
-					 <div class="byline">
-        				<p class="meta">May 07, 2012 Posted by <a href="#">Someone</a></p>
-        				<p class="links"><a href="post.html">Read More</a> BLAH BLAH BLAH</p>
-       </div>
+					<div class="entry"><%= post.body %></div>
+					 	<div class="byline">
+        				<p class="meta"><%= post.created_at.strftime("%b %d. %y") %> Posted by <%= post.admin_user.name %></a></p>
+        				<p class="links"><%= link_to "Read more", post %></p>
+        				<p>Category: <%= post.category.name %></p>
+       					</div>
 	</div>			
 <% end %>
 
